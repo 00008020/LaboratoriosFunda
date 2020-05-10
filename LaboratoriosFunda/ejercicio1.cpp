@@ -4,9 +4,9 @@ using namespace std;
 
 int main(void)
 {
-    int numero1;
-    int numero2;
-    int numero3;
+    double numero1;
+    double numero2;
+    double numero3;
 
     cout << "introduzca el primer numero:" << endl;
     cin >> numero1;
