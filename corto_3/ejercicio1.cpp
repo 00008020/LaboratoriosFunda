@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double funcion_salario_total(int horas, int extra)
+float funcion_salario_total(int horas, int extra)
 {
     float salario_normal, salario_extra, salario_total;
 
