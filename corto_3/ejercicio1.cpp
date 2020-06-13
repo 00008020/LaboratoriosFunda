@@ -30,17 +30,31 @@ float funcion_salario_descuento(int extra, float total)
 
 int main(void)
 {
-    int horas, extra;
+    int horas, extra, cantidad;
 
-    cout << "Introduzca la cantidad de horas trabajadas: " << endl;
-    cin >> horas;
-    cout << "Introduzca la cantidad de horas extras: " << endl;
-    cin >> extra;
+    cout << "Introduzca la cantidad de empleados: " << endl;
+    cin >> cantidad;
+
+    for (int i = 1; i <= cantidad; i++)
+    {
+        do
+    {
+        cout << "Introduzca la cantidad de horas trabajadas por el empleado " << i << ": " << endl;
+        cin >> horas;
+        cout << "Introduzca la cantidad de horas extras trabajadas por el empleado " << i << ": " << endl;
+        cin >> extra;
+        
+        float total = funcion_salario_total(horas, extra);
+        float descuento = funcion_salario_descuento(extra, total);
+
+        cout << "Su salario total del empleado " << i << " es " << fixed << setprecision(2) << total << " y con el descuento aplicado, su salario es de " << fixed << setprecision(2)<< descuento << endl;
+        i++;
+    } while (i <= cantidad);
+    }
     
-    float total = funcion_salario_total(horas, extra);
-    float descuento = funcion_salario_descuento(extra, total);
-
-    cout << "Su salario total es " << fixed << setprecision(2) << total << " y con el descuento aplicado, su salario es de " << fixed << setprecision(2)<< descuento;
+    
+    
+    
 
     return 0;
 }
